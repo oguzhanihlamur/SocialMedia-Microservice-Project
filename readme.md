@@ -11,7 +11,7 @@ docker run -d --name mongodb -p 27017:27017 muhammedali55/mongodb:v.0.3
 ```
 
     mongod: 
-    db.createUser({user: "muhammet",pwd: "root",roles: ["readWrite","dbAdmin"]})
+    db.createUser({user: "antozy",pwd: "root",roles: ["readWrite","dbAdmin"]})
 
 
 ## Docker üzerinde Redis Single Node oluşturmak
@@ -46,4 +46,29 @@ public class RedisConfig {
     }
 
 }
+```
+
+## Dockerfile ile image oluşturmak
+
+    DİKKAT !!!
+    localde çalıştırılacak ise aşağıdaki image komutu kullanılabilir.
+
+```bash
+docker build -t configserver:v250101 .
+```
+
+    DockerHub üzerinde yayınlanacak ve Cloud a atılacak ise 
+
+```bash
+docker build -t aantozy/configserver:v250101 .
+```
+
+    M Çipli bir MacOS var ise 
+
+```bash
+docker build --platform linux/amd64 -t aantozy/egitimconfigserver:v250101 .
+
+docker build --platform linux/amd64 -t aantozy/egitimauthmicroservice:v250101 .
+
+docker build --platform linux/amd64 -t aantozy/egitimusermicroservice:v250101 .
 ```
