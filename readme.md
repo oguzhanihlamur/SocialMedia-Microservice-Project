@@ -1,3 +1,11 @@
+## Repository Hakkında Bilgiler
+Bu repository altında bulunan tüm uygulamalar Google Cloud altında yayınlanmıştır.
+
+Uygulamaların Docker Hub Linkleri :
+```
+https://hub.docker.com/repositories/aantozy
+```
+
 # Notlar
 
 ## Docker Image larını Eklemek
